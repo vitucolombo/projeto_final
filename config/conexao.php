@@ -1,6 +1,6 @@
 <?php
 
-class conexao{
+class Conexao{
     static function getConnection(){
 
     $conexao = new mysqli("localhost","root","","db_catalogo_3e1",3366);
