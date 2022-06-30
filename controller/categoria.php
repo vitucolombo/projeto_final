@@ -6,12 +6,19 @@ class Categoria{
         $this->modelo = new CategoriaModel();
     }
  
-    function index(){
-        include "view/template/conteudo.php";
+        function index(){
+            $categorias = $this->modelo->buscarTudo();
+            include "view/template/cabecalho.php";
+            include "view/template/menu.php";
+            include "view/categoria/listagem.php";
+            include "view/template/rodape.php";
         }
        
         function add(){
-        echo "mostrar form categoria";
+            include "view/template/cabecalho.php";
+            include "view/template/menu.php";
+            include "view/categoria/form.php";
+            include "view/template/rodape.php";
         }
        
         function excluir($id){
@@ -23,10 +30,10 @@ class Categoria{
  
  
  
-//$categoria = new CategoriaModel();
+
 //$categoria->inserir("SmartTV");
 //$categoria->excluir(1);
 //$categoria->atualizar(2, "SmartPhone");
 //var_dump($categoria->buscarPorId(3));
-//var_dump($categoria->buscarTudo());
+
 
